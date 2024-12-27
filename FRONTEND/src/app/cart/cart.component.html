@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead class="tabHeader">
+            <tr>
+                <th>
+                    <div> 
+                        <label> Référence </label>
+                    </div>
+                </th>
+                <th>
+                    <div> 
+                        <label>Libellé</label>
+                    </div>
+                </th>
+                <th>
+                    <div> 
+                        <label>Prix</label>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList | async">
+                <td>{{product.ref}}</td>
+                <td>{{product.libelle}}</td>
+                <td>{{product.prix}}</td>
+                <td><button type="button" (click)="deleteFromCart(product)">Supprimer du panier</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
