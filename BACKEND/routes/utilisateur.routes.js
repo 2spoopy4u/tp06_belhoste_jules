@@ -9,8 +9,8 @@ module.exports = app => {
     // login utilisateur
     router.post("/login", utilisateur.login);
     router.post("/add",utilisateur.addUser);
-    router.put("/update",utilisateur.updateUser);
-    router.get("/get",utilisateur.getUser);
+    router.put("/update", checkJwt,utilisateur.updateUser);
+    router.get("/get", checkJwt,utilisateur.getUser);
 
     app.use('/api/utilisateur', router);
   };
