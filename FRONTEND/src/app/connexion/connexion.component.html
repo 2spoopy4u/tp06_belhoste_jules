@@ -1,0 +1,12 @@
+<h3>Connexion</h3>
+<label for="login">Login : </label><input [(ngModel)]="login" /><br />
+<label for="password">Password : </label
+><input [(ngModel)]="password" type="password" /><br />
+<br />
+<button (click)="connexion()">Connexion</button>
+
+<hr />
+<div *ngIf="cnx">
+  Bonjour {{ nom }} - {{ prenom }}
+
+</div>

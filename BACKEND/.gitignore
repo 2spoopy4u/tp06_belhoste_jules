@@ -1,0 +1,50 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*  # To ignore all environment files with different names
+
+# Build output (if applicable)
+dist/
+build/
+
+# Dependency directories (common with bundlers or package managers)
+jspm_packages/
+.bower_components/
+
+# Optional system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor specific files
+.vscode/
+.idea/
+
+# npm package lock files (if you prefer to ignore them, otherwise remove these lines)
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.log
+
+# Coverage directory for test reports (e.g. from Jest, Mocha)
+coverage/
+
+# VS Code settings folder
+.vscode/
+
+# OS-specific files
+*.swp  # Vim swap files
+*.swo  # Vim swap files
+
+# dotenv variables for different environments
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

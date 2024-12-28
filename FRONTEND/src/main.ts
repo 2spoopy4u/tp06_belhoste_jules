@@ -7,7 +7,8 @@ import { ProductState } from './app/shared/state/products-state';
 import { NgxsModule } from '@ngxs/store';
 
 bootstrapApplication(AppComponent, {providers: [...appConfig.providers,provideHttpClient(),
-  importProvidersFrom(NgxsModule.forRoot([ProductState]))
+  importProvidersFrom(NgxsModule.forRoot([ProductState])),
+  
 ]})
   .catch((err) => console.error(err));
   

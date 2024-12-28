@@ -2,8 +2,16 @@
 
 <br />
 <div class="linkList">
-<a routerLink="/productList">Liste </a> 
-<a routerLink="/cart">Panier </a> 
+<a routerLink="/connexion">Connexion </a> 
+<a routerLink="/add">Inscription </a> 
+
+<div *ngIf="authUser" class="linkList">
+    <a routerLink="/productList">Liste </a> 
+    <a routerLink="/cart">Panier </a> 
+    <a href="#" (click)="goToUserProfile($event)">Modifier utilisateur </a> 
+
+</div>
+
 </div>
 <router-outlet></router-outlet>
 

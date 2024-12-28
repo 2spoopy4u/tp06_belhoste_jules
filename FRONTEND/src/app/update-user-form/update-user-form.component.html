@@ -1,0 +1,49 @@
+<h3>Mise à jour du compte</h3>
+
+<form id="clientForm" [ngFormOptions]="{updateOn: 'submit'}" (submit)="checkAndSubmit($event)">
+    <input required type="hidden" class="form-control" name="id" [(ngModel)]="user.id"/>
+
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="name">Nom</label>
+                <input required type="text" class="form-control" name="name" [(ngModel)]="user.nom"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="firstname">Prénom</label>
+                <input required type="text" class="form-control" name="firstname" [(ngModel)]="user.prenom"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="mail">Addresse mail</label>
+                <input required type="text" class="form-control" name="mail" [(ngModel)]="user.mail"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="login">Login</label>
+                <input readonly required type="text" class="form-control" name="login" [(ngModel)]="user.login"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="pwd">Mot de passe</label>
+                <input required type="password" class="form-control" name="pwd" [(ngModel)]="user.password"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="pwdCheck">Confirmer le mot de passe</label>
+                <input required type="password" class="form-control" name="pwdCheck" [(ngModel)]="pwdCheck"/>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="form-group col-md-10">
+            </div>
+            <div class="form-group col-md-1">
+                <button  class="btn btn-primary mb-2" type="submit">Valider</button>
+            </div>
+        </div>
+    </div>
+</form>
