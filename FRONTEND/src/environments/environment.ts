@@ -1,8 +1,8 @@
 export const environment = {
     production: false,
-    backendLoginClient: 'https://10.217.255.80:80/api/utilisateur/login',
-    backendCatalogue: 'https://10.217.255.80:80/api/catalogue',
-    backendAddClient: 'https://10.217.255.80:80/api/utilisateur/add',
-    backendUpdateClient: 'https://10.217.255.80:80/api/utilisateur/update',    
-    backendGetClient: 'https://10.217.255.80:80/api/utilisateur/get',
+    backendLoginClient: 'https://cnamapp-iso7.onrender.com/api/utilisateur/login',
+    backendCatalogue: 'https://cnamapp-iso7.onrender.com/api/catalogue',
+    backendAddClient: 'https://cnamapp-iso7.onrender.com/api/utilisateur/add',
+    backendUpdateClient: 'https://cnamapp-iso7.onrender.com/api/utilisateur/update',    
+    backendGetClient: 'https://cnamapp-iso7.onrender.com/api/utilisateur/get',
   };
