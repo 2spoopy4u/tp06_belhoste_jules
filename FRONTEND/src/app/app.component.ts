@@ -15,23 +15,30 @@ import { User } from './shared/model/user';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  authUser?:User;
+  authUserId?: string;
   private loginStatusSubscription: Subscription;
-  constructor(private router: Router,private route:ActivatedRoute, private backendReader:ApiService){}
+  constructor(private router: Router,  private backendReader: ApiService) { }
   title = 'TP06_Belhoste_Jules';
 
-  goToUserProfile($event:MouseEvent) {
+  goToUserProfile($event: MouseEvent) {
     $event.preventDefault();
-    this.router.navigate(['/update'], { queryParams: { id: this.authUser!.id } });
+    this.router.navigate(['/update'], { queryParams: { id: this.authUserId! } });
   }
   ngOnInit() {
-    this.loginStatusSubscription = this.backendReader.loginStatus$.subscribe(status => {
-      this.authUser = status; 
-    });
-    if(!this.authUser){
-      this.router.navigate(['/']);
 
+    const tokenUser = this.backendReader.getUserFromToken();
+    if (tokenUser) {
+      console.log("token", tokenUser)
+      this.backendReader.setLoginStatus(tokenUser);
     }
+
+    this.loginStatusSubscription = this.backendReader.loginStatus$.subscribe(status => {
+      this.authUserId = status;
+      console.log("status ", status);
+      if (!this.authUserId) {
+        this.router.navigate(['/']);
+      }
+    });
   }
 
   ngOnDestroy() {

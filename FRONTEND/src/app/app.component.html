@@ -5,7 +5,7 @@
 <a routerLink="/connexion">Connexion </a> 
 <a routerLink="/add">Inscription </a> 
 
-<div *ngIf="authUser" class="linkList">
+<div *ngIf="authUserId" class="linkList">
     <a routerLink="/productList">Liste </a> 
     <a routerLink="/cart">Panier </a> 
     <a href="#" (click)="goToUserProfile($event)">Modifier utilisateur </a> 

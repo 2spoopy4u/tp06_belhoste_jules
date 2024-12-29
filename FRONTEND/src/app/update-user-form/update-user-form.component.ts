@@ -14,7 +14,6 @@ user: User = new User();
 pwdCheck:string="";
 constructor(private route: ActivatedRoute, private backendReader: ApiService) {}
 ngOnInit() {
-  console.log("init")
   let userId = null;
   this.route.queryParamMap.subscribe(params => {
     userId = params.get('id');  
@@ -50,7 +49,7 @@ checkAndSubmit($event: SubmitEvent) {
     return;
   }
   this.backendReader.updateUser(this.user).subscribe();
-
+  alert("Mise à jour réussie");
 }
 
 }
