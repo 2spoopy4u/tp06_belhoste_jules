@@ -1,11 +1,8 @@
 export const environment = {
     production: false,
-    backendLoginClient: 'https://phpsansbdd.onrender.com/api/utilisateur/login',
-    backendCatalogue: 'https://phpsansbdd.onrender.com/api/catalogue',
-  backendLoginClientLoc :"http://localhost:443/api/utilisateur/login",
-  backendAddClientLoc :"http://localhost:443/api/utilisateur/add",
-  backendUpdateClientLoc :"http://localhost:443/api/utilisateur/update",
-  backendgetClientLoc :"http://localhost:443/api/utilisateur/get",
-
-backendCatalogueLoc : "http://localhost:443/api/catalogue",
+    backendLoginClient: 'https://10.217.255.80:80/api/utilisateur/login',
+    backendCatalogue: 'https://10.217.255.80:80/api/catalogue',
+    backendAddClient: 'https://10.217.255.80:80/api/utilisateur/add',
+    backendUpdateClient: 'https://10.217.255.80:80/api/utilisateur/update',    
+    backendGetClient: 'https://10.217.255.80:80/api/utilisateur/get',
   };

@@ -28,14 +28,14 @@ export class ApiService {
     };
     const data = `login=${login}&password=${password}`;    
     return this.http.post<User>(
-      environment.backendLoginClientLoc,
+      environment.backendLoginClient,
       data,
       httpOptions
     );
   }
 
   public getCalague(): Observable<Product[]> {
-    return this.http.get<Product[]>(environment.backendCatalogueLoc);
+    return this.http.get<Product[]>(environment.backendCatalogue);
   }
   public addUser(user : User): Observable<User>{
     let data: String;
@@ -46,7 +46,7 @@ export class ApiService {
     };
     data = 'login=' + user.login + '&password=' + user.password+ '&mail=' + user.mail+ '&nom=' + user.nom+ '&prenom=' + user.prenom;
     return this.http.post<User>(
-      environment.backendAddClientLoc,
+      environment.backendAddClient,
       data,
       httpOptions
     );
@@ -61,7 +61,7 @@ export class ApiService {
     };
     data = 'login=' + user.login + '&password=' + user.password+ '&mail=' + user.mail+ '&nom=' + user.nom+ '&prenom=' + user.prenom+ '&id=' + user.id;
     return this.http.put(
-      environment.backendUpdateClientLoc,
+      environment.backendUpdateClient,
       data,
       httpOptions
     );
@@ -72,9 +72,8 @@ export class ApiService {
         'Content-Type': 'application/x-www-form-urlencoded',
       }),
     };
-    console.log(environment.backendgetClientLoc+"?id="+user)
     return this.http.get(
-      environment.backendgetClientLoc+"?id="+user,
+      environment.backendGetClient+"?id="+user,
       httpOptions
     );
   }
